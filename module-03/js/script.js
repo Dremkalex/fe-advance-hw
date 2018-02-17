@@ -36,15 +36,15 @@ const arrSecondWord = secondWord.split("");
 const arrThirdWord = thirdWord.split("");
 
 for (let i = 0; i < arrFirstWord.length; i++) {
-  hello += searchLetter(arrFirstWord, arrFirstWord[i]);
+  hello += searchLetter(keyboard, arrFirstWord[i]);
 };
 
 for (let i = 0; i < arrSecondWord.length; i++) {
-  javascript += searchLetter(arrSecondWord, arrSecondWord[i]);
+  javascript += searchLetter(keyboard, arrSecondWord[i]);
 };
 
 for (let i = 0; i < arrThirdWord.length; i++) {
-  trainer += searchLetter(arrThirdWord, arrThirdWord[i]);
+  trainer += searchLetter(keyboard, arrThirdWord[i]);
 };
 
 console.log(`${hello} ${javascript} ${trainer}!!!`);
