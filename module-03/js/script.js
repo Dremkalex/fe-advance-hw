@@ -15,36 +15,32 @@ console.log(thirdLine);
 const keyboard = [firstLine, secondLine, thirdLine];
 console.log(keyboard);
 
-function searchLetter (arr, letters) {
-  let letter;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].includes(letters)) {
-      const letterIndex = arr[i].indexOf(letters);
-      letter = arr[i][letterIndex];
-    }
-  }
-  return letter;
-};
+const hello =
+keyboard[1][5] +
+keyboard[0][2] +
+keyboard[1][8] +
+keyboard[1][8] +
+keyboard[0][8];
 
-let hello = '', javascript = '', trainer = '';
-const firstWord = "hello";
-const secondWord = "javascript";
-const thirdWord = "trainer";
+const javascript =
+keyboard[1][6] +
+keyboard[1][0] +
+keyboard[2][3] +
+keyboard[1][0] +
+keyboard[1][1] +
+keyboard[2][2] +
+keyboard[0][3] +
+keyboard[0][7] +
+keyboard[0][9] +
+keyboard[0][4];
 
-const arrFirstWord = firstWord.split("");
-const arrSecondWord = secondWord.split("");
-const arrThirdWord = thirdWord.split("");
+const trainer =
+keyboard[0][4] +
+keyboard[0][3] +
+keyboard[1][0] +
+keyboard[0][7] +
+keyboard[2][5] +
+keyboard[0][2] +
+keyboard[0][3];
 
-for (let i = 0; i < arrFirstWord.length; i++) {
-  hello += searchLetter(keyboard, arrFirstWord[i]);
-};
-
-for (let i = 0; i < arrSecondWord.length; i++) {
-  javascript += searchLetter(keyboard, arrSecondWord[i]);
-};
-
-for (let i = 0; i < arrThirdWord.length; i++) {
-  trainer += searchLetter(keyboard, arrThirdWord[i]);
-};
-
-console.log(`${hello} ${javascript} ${trainer}!!!`);
+console.log(`${hello} ${javascript} ${trainer}!`);
