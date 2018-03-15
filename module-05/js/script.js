@@ -27,7 +27,11 @@ while (userChoice !== '0' && userChoice !== '1' && userChoice !== '2') {
   userChoice = prompt(`Выберите язык, где: \'0\' - en, \'1\' - ru, \'2\' - ua!`);
 }
 
-keyboard.currentLang = keyboard.langs[userChoice];
+if (userChoice) {
+  keyboard.currentLang = keyboard.langs[userChoice];
+  console.log(`Случайная буква алфавита ${keyboard.currentLang}: `, getRandCharInAlph())
+}
+
 
 function getRandCharInAlph () {
   const row = Math.floor(Math.random() * 3);
@@ -44,5 +48,3 @@ function getRandCharInAlph () {
     default: return alert('Error');
   }
 }
-
-console.log(`Случайная буква алфавита ${keyboard.currentLang}: `, getRandCharInAlph());
