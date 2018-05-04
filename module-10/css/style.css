@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.result {
+  font-family: 'Roboto';
+  font-size: 1.125rem;
+}
+
+.timer {
+  display: inline-block;
+  padding: 10px;
+  font-size: 2rem;
+  font-family: 'Courier';
+  border:1px solid #bdbdbd;
+  background-color: hsla(50, 33%, 25%, .05);
+}
+.exercise {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+.keyboard button {
+  width:3.75rem;
+  height:3.75rem;
+  margin-right:.5rem;
+  padding: 1rem;
+  border:1px solid #bdbdbd;
+  border-radius:.125rem;
+  background-color: transparent;
+  font-family: 'Roboto';
+  font-size: 1.125rem;
+}
+
+.reset-btn {
+  width:4.75rem;
+  height:2.75rem;
+  margin-top: 2rem;
+  padding: .5rem;
+  border:1px solid #bdbdbd;
+  border-radius:.5rem;
+  background-color: hsla(50, 33%, 25%, .05);
+  font-size: 1.125rem;
+}
