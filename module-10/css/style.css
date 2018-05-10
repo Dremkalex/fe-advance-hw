@@ -15,9 +15,21 @@
   border:1px solid #bdbdbd;
   background-color: hsla(50, 33%, 25%, .05);
 }
-.exercise {
+
+.reset-btn {
+  width:4.75rem;
+  height:2.75rem;
+  margin-left: 2rem;
+  padding: .5rem;
+  border:1px solid #bdbdbd;
+  border-radius:.5rem;
+  background-color: #FA5858;
+  font-size: 1.125rem;
+}
+
+.exercise, .userInput {
   margin-bottom: 1rem;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .keyboard__row {
@@ -45,15 +57,4 @@
   border: 1px solid transparent;
   background-color: #03a9f4;
   color: #fff
-}
-
-.reset-btn {
-  width:4.75rem;
-  height:2.75rem;
-  margin-top: 2rem;
-  padding: .5rem;
-  border:1px solid #bdbdbd;
-  border-radius:.5rem;
-  background-color: hsla(50, 33%, 25%, .05);
-  font-size: 1.125rem;
 }

@@ -52,15 +52,20 @@ const timer = {
 
 //****************Построение документа с помощбю JS****************//
 
+/****Строка-задание****/
+const exercise = document.querySelector(".exercise");
+exercise.textContent = `Наберите строку: ${string}`;
+/****Ввод пользователя****/
+const userInput = document.createElement('div');
+userInput.classList.add('userInput');
+userInput.textContent = "Вы верно набрали: ";
+exercise.after(userInput);
 /****Лучший результат****/
 const bestTypingSpeed = document.createElement('p');
 bestTypingSpeed.classList.add('result');
-/****Таймер****/
-timerOutput.before(bestTypingSpeed);
+userInput.after(bestTypingSpeed);
 updateView();
-/****Строка-задание****/
-const exercise = document.querySelector(".exercise");
-exercise.textContent = string;
+
 /****Конструктор обьекта клавиатуры****/
 function Rows(str) {
   const langArr = lang.split("");
@@ -97,7 +102,7 @@ keyboard.lastElementChild.firstElementChild.classList.add('keyboard__btn--space'
 const reset = document.createElement('button');
 reset.textContent = 'Reset';
 reset.classList.add('reset-btn');
-keyboard.after(reset);
+timerOutput.after(reset);
 
 const buttons = Array.from(document.querySelectorAll("button"));
 const activeBtn = {
@@ -121,7 +126,7 @@ const onClick = (event) => {
     for(let item of string){
       if (charsArr.includes(item)) {
         if (item === event.target.textContent) {
-          charsArr.pop();
+          userInput.textContent += charsArr.pop();
         } else break;
       }
     }
@@ -164,7 +169,7 @@ const keyDown = (event) => {
   for(let item of string){
     if (charsArr.includes(item)) {
       if (item === event.key) {
-        charsArr.pop();
+        userInput.textContent += charsArr.pop();
       } else break;
     }
   }
@@ -184,6 +189,7 @@ const resetTime = (event) => {
     timer.taskTime = null;
     charsArr = string.split("").reverse();
     timerOutput.textContent = '00m:00s:000ms';
+    userInput.textContent = "Вы верно набрали: ";
     if (activeBtn.node !== null) {
         activeBtn.node.classList.remove("keyboard__btn--active");
       }
