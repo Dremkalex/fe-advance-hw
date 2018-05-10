@@ -20,16 +20,31 @@
   font-size: 3rem;
 }
 
-.keyboard button {
+.keyboard__row {
+  display: flex;
+  justify-content: center;
+}
+
+.keyboard__btn {
   width:3.75rem;
   height:3.75rem;
-  margin-right:.5rem;
+  margin:.5rem;
   padding: 1rem;
   border:1px solid #bdbdbd;
   border-radius:.125rem;
   background-color: transparent;
   font-family: 'Roboto';
   font-size: 1.125rem;
+}
+
+.keyboard__btn--space {
+  width: 20rem;
+}
+
+.keyboard__btn--active {
+  border: 1px solid transparent;
+  background-color: #03a9f4;
+  color: #fff
 }
 
 .reset-btn {
