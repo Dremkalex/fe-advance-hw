@@ -8,43 +8,43 @@
   <body>
     <div class="container">
 
-      <div class="task-panel">
+      <form class="task-panel">
         <div class="task-panel__caption">
           <p class="task-panel__heading">Task Panel</p>
         </div>
         <!-- =======getAllUsers()======= -->
-        <form class="search-form">
+        <div class="search-form">
           <p class="search-form__task">Show all Users of Database</p>
           <button class="mdc-btn js-get" type="submit">get</button>
-        </form>
+        </div>
         <!-- =======getUserById(id)======= -->
-        <form class="search-form">
+        <div class="search-form">
           <p class="search-form__task">Search User by ID</p>
           <input class="input-id" type="text" name="userId" placeholder="Enter user ID">
           <button class="mdc-btn js-get-id" type="submit">search</button>
-        </form>
+        </div>
         <!-- =======addUser(name, age)======= -->
-        <form class="search-form">
+        <div class="search-form">
           <p class="search-form__task">Add new User</p>
           <input class="input-add-name" type="text" name="name" placeholder="Enter user name">
           <input class="input-add-age" type="text" name="age" placeholder="Enter user age">
           <button class="mdc-btn js-post-add" type="submit">add</button>
-        </form>
+        </div>
         <!-- =======removeUser(id)======= -->
-        <form class="search-form">
+        <div class="search-form">
           <p class="search-form__task">Remove User by ID</p>
           <input class="input-remove" type="text" name="userId" placeholder="Enter user ID">
           <button class="mdc-btn js-post-remove" type="submit">remove</button>
-        </form>
+        </div>
         <!-- =======updateUser(id, user)======= -->
-        <form class="search-form">
+        <div class="search-form">
           <p class="search-form__task">Update user data</p>
           <input class="input-update-id" type="text" name="userId" placeholder="Enter user ID">
           <input class="input-update-name"  type="text" name="name" placeholder="Enter user name">
           <input class="input-update-age" type="text" name="age" placeholder="Enter user age">
           <button class="mdc-btn js-put-update" type="submit">update</button>
-        </form>
-      </div>
+        </div>
+      </form>
 
       <div class="result-panel">
         <div class="result-panel__caption">

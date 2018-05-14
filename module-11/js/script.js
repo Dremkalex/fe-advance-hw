@@ -54,6 +54,7 @@ function getAllUsers(evt) {
         throw new Error("Error fetching data");
     })
     .then(users => {
+      console.log(users);
         const usersInfo = users.data;
         updateView(usersInfo);
         result.removeAttribute('hidden');

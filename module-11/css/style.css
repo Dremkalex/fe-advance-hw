@@ -116,12 +116,3 @@ tr:hover {
 .search-form input::placeholder {
   color: #ccc;
 }
-
-/* .task-panel__item {
-  padding: 10px 0;
-  list-style-type: none;
-}
-
-.task-panel__link {
-  text-decoration: none;
-} */
