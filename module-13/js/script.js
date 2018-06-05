@@ -17,28 +17,36 @@ function validate(evt) {
   const lastNameVal = lastname.value;
   let telNumVal = tel.value;
 
+  // const validateResult = {
+  //   firstNameRes: firstNameReg.test(firstNameVal),
+  //   lastNameRes: lastNameReg.test(lastNameVal),
+  //   telRes: telReg.test(telNumVal)
+  // }
+
   const validateResult = {
-    firstNameRes: firstNameReg.test(firstNameVal),
-    lastNameRes: lastNameReg.test(lastNameVal),
-    telRes: telReg.test(telNumVal)
+    firstNameRes: firstNameVal.match(firstNameReg),
+    lastNameRes: lastNameVal.match(lastNameReg),
+    telRes: telNumVal.match(telReg)
   }
+
+
 
   if(!validateResult.firstNameRes) {
     firstname.classList.add('error');
     firstname.setCustomValidity('Введите корректно имя: до 3-х слов!');
-  }
+  } else firstname.classList.remove('error');
 
   if(!validateResult.lastNameRes) {
     lastname.classList.add('error');
     lastname.setCustomValidity('Введите корректно фамилию: до 2-х слов, можно через дефис!');
-  }
+  } else lastname.classList.remove('error');
 
   if (!validateResult.telRes) {
     tel.classList.add('error');
     tel.setCustomValidity('Введите корректный номер: \'+\' и 12 цифр!');
   } else {
-    telNumVal = telNumVal.replace(/(\d)(-?\s?)/g, '$1').replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4 ');
-    tel.value = telNumVal;
+    tel.value = telNumVal.replace(/(\d)(-?\s?)/g, '$1').replace(/(\d{3})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4 ');
+    tel.classList.remove('error');
   }
 
   if(validateResult.firstNameRes && validateResult.lastNameRes && validateResult.telRes) {
